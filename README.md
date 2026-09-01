@@ -17,7 +17,7 @@ Foram realizados testes práticos de intrusão e evasão, mapeados diretamente n
 * **Tática:** Credential Access
 * **Técnica:** T1110
 * **Descrição:** Execução de script PowerShell simulando múltiplas falhas de autenticação (`Event ID 4625`).
-* **Evidência:** ![Força Bruta](evidencias/image_8b3208.jpg)
+* **Evidência:** ![Força Bruta](Cenario1_ForcaBruta_Dashboard.jfif)
 
 ### 2. Escalonamento de Privilégios (Criação de Administrador Oculto)
 * **Tática:** Privilege Escalation / Persistence
@@ -30,6 +30,11 @@ Foram realizados testes práticos de intrusão e evasão, mapeados diretamente n
 * **Técnica:** T1574.001 (DLL Search Order Hijacking)
 * **Descrição:** Detecção avançada de criação de arquivos `.ps1` e carregamento suspeito de DLLs em pastas críticas do Windows.
 * **Evidência:** ![DLL Hijacking](evidencias/image_8b2ee3.png)
+### 4. Execução de Script Suspeito (Evasão via PowerShell)
+* **Tática:** Execution / Defense Evasion
+* **Técnica:** T1059.001 (Command and Scripting Interpreter: PowerShell)
+* **Descrição:** Monitoramento do Sysmon (Event ID 11) detectou a criação de arquivos temporários `.ps1` durante a execução de comandos ofuscados ou scripts maliciosos.
+* **Evidência:** ![Execução de Script](Cenario3_Sysmon_PowerShell_Temp.png)
 
 *(Nota: Outra técnica de Evasão de Defesa mapeada no laboratório foi a T1070 - Limpeza de Logs de Eventos do Windows[cite: 2]).*
 
