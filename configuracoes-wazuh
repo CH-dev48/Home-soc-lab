@@ -1,1 +1,20 @@
-
+# ossec.conf
+<!-- Trecho de configuracao do Agente Windows apontando para o Manager -->
+<client>
+  <server>
+    <address>192.168.15.3</address>
+    <port>1514</port>
+    <protocol>tcp</protocol>
+  </server>
+  <config-profile>windows, windows10</config-profile>
+  <crypto_method>aes</crypto_method>
+</client>
+# local_rules.xml
+<!-- /var/ossec/etc/rules/local_rules.xml -->
+<group name="windows, sysmon,">
+  <!-- 
+    Espaço reservado para regras de detecção personalizadas do SOC.
+    As regras nativas do Wazuh para Sysmon e Windows Event Log cobriram
+    as detecções de força bruta (Regra 60122) e DLL Hijacking (Regra 92219).
+  -->
+</group>
