@@ -23,28 +23,20 @@ Foram realizados testes práticos de intrusão e evasão, mapeados diretamente n
 * **Tática:** Privilege Escalation / Persistence
 * **Técnica:** T1136.001 (Local Account)
 * **Descrição:** Criação não autorizada do usuário `attacker_admin` via linha de comando.
-* **Evidência:** ![Escalonamento](evidencias/image_8b3243.jpg)
+* **Evidência:** ![Escalonamento](Cenario1_ForcaBruta_Detalhe.png)
 
 ### 3. Evasão de Defesa e Execução Suspeita (DLL Hijacking)
 * **Tática:** Defense Evasion / Privilege Escalation
 * **Técnica:** T1574.001 (DLL Search Order Hijacking)
 * **Descrição:** Detecção avançada de criação de arquivos `.ps1` e carregamento suspeito de DLLs em pastas críticas do Windows.
-* **Evidência:** ![DLL Hijacking](evidencias/image_8b2ee3.png)
+* **Evidência:** ![DLL Hijacking](Cenario3_evasao_DLL.png)
 ### 4. Execução de Script Suspeito (Evasão via PowerShell)
 * **Tática:** Execution / Defense Evasion
 * **Técnica:** T1059.001 (Command and Scripting Interpreter: PowerShell)
 * **Descrição:** Monitoramento do Sysmon (Event ID 11) detectou a criação de arquivos temporários `.ps1` durante a execução de comandos ofuscados ou scripts maliciosos.
-* **Evidência:** ![Execução de Script](Cenario3_Sysmon_PowerShell_Temp.png)
+* **Evidência:** ![Execução de Script](Cenario3_Evasao_ScriptPowerShell.png)
 
-*(Nota: Outra técnica de Evasão de Defesa mapeada no laboratório foi a T1070 - Limpeza de Logs de Eventos do Windows[cite: 2]).*
-
-## 📊 Triagem e Métricas do SOC (Triage)
-Como parte do fluxo de trabalho de um Analista de SOC Nível 1 (L1), os alertas foram revisados e priorizados com base em sua criticidade[cite: 3]. 
-
-Em um cenário real de reporte gerencial[cite: 3], os eventos registrados neste laboratório são classificados da seguinte forma[cite: 6]:
-* **Verdadeiros Positivos (True Positives):** Ameaças reais validadas (ex: a criação do usuário `attacker_admin`)[cite: 6].
-* **Falsos Positivos (False Positives):** Alertas disparados por comportamentos legítimos do sistema[cite: 6].
-* **Níveis de Severidade:** Incidentes categorizados por prioridade (ex: Severidade 1, 2 ou 3) para guiar o tempo de resposta[cite: 6].
+*(Nota: Outra técnica de Evasão de Defesa mapeada no laboratório foi a T1070 - Limpeza de Logs de Eventos do Windows).*
 
 ---
 *Projeto desenvolvido para fins educacionais e aprimoramento em Cibersegurança.*
