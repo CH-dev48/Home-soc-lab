@@ -1,1 +1,15 @@
+# topologia.md Topologia do Laboratório
 
+* **Hypervisor:** VirtualBox
+* **Rede:** Rede NAT (Garantindo comunicação bidirecional isolada)
+
+## Ativos
+1. **Wazuh Manager (SIEM):**
+   * SO: Ubuntu Server
+   * IP: 192.168.15.3
+   * Papel: Coleta, normalização, análise e correlação de regras (Rule matching).
+
+2. **Endpoint Vítima:**
+   * SO: Windows 10
+   * IP: 192.168.15.4
+   * Papel: Geração de logs de segurança (Sysmon e Event Viewer) e envio via Wazuh Agent (Porta 1514).
