@@ -1,1 +1,8 @@
+# Script para simular ataque de Forca Bruta (Credential Access - T1110)
+Write-Host "Iniciando simulacao de Forca Bruta (Event ID 4625)..."
 
+1..10 | ForEach-Object { 
+    net use \\127.0.0.1 /user:fakeuser wrongpass 
+}
+
+Write-Host "Simulacao concluida."
