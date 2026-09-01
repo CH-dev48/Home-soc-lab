@@ -1,17 +1,17 @@
-# 🛡️ Home-SOC-Lab: Implementação e Monitoramento com Wazuh SIEM
+# 🛡️ Home-Soc-Lab: Implementação e Monitoramento com Wazuh SIEM
 
 ## 📖 Sobre o Projeto
-Este projeto consiste na construção de um laboratório de *Security Operations Center* (SOC) para simular um ambiente corporativo. O objetivo principal é aplicar técnicas de Tratamento e Resposta a Incidentes (IH&R)[cite: 2], utilizando o Wazuh (SIEM open-source) para coletar, normalizar e correlacionar logs de endpoints[cite: 1].
+Este projeto consiste na construção de um laboratório de *Security Operations Center* (SOC) para simular um ambiente corporativo. O objetivo principal é aplicar técnicas de Tratamento e Resposta a Incidentes (IH&R), utilizando o Wazuh (SIEM open-source) para coletar, normalizar e correlacionar logs de endpoints.
 
-A centralização dos logs no SIEM otimiza o trabalho da equipe, permitindo a análise de incidentes sem a necessidade de acessar individualmente cada ativo da rede[cite: 5].
+A centralização dos logs no SIEM otimiza o trabalho da equipe, permitindo a análise de incidentes sem a necessidade de acessar individualmente cada ativo da rede.
 
 ## 🏗️ Topologia e Arquitetura
 * **Manager/SIEM:** Ubuntu Server (VM) executando o Wazuh Manager.
 * **Endpoint Monitorado:** Windows 10 (VM) com o Wazuh Agent instalado.
-* **Configurações Customizadas:** Foram aplicadas regras personalizadas no arquivo `local_rules.xml` para refinar a detecção de ameaças[cite: 1].
+* **Configurações Customizadas:** Foram aplicadas regras personalizadas no arquivo `local_rules.xml` para refinar a detecção de ameaças.
 
 ## ⚔️ Simulação de Ameaças (Threat Hunting) e Mapeamento MITRE ATT&CK
-Foram realizados testes práticos de intrusão e evasão, mapeados diretamente no framework MITRE ATT&CK para garantir uma inteligência orientada ao contexto das ameaças modernas[cite: 2].
+Foram realizados testes práticos de intrusão e evasão, mapeados diretamente no framework MITRE ATT&CK para garantir uma inteligência orientada ao contexto das ameaças modernas.
 
 ### 1. Ataque de Força Bruta (Brute Force)
 * **Tática:** Credential Access
