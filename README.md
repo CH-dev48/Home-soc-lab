@@ -1,4 +1,4 @@
-# 🛡️ Home-Soc-Lab: Implementação e Monitoramento com Wazuh SIEM
+# 🛡️ Home-soc-Lab: Implementação e Monitoramento com Wazuh SIEM
 
 ## 📖 Sobre o Projeto
 Este projeto consiste na construção de um laboratório de *Security Operations Center* (SOC) para simular um ambiente corporativo. O objetivo principal é aplicar técnicas de Tratamento e Resposta a Incidentes (IH&R), utilizando o Wazuh (SIEM open-source) para coletar, normalizar e correlacionar logs de endpoints.
@@ -29,7 +29,7 @@ Foram realizados testes práticos de intrusão e evasão, mapeados diretamente n
 * **Tática:** Defense Evasion / Privilege Escalation
 * **Técnica:** T1574.001 (DLL Search Order Hijacking)
 * **Descrição:** Detecção avançada de criação de arquivos `.ps1` e carregamento suspeito de DLLs em pastas críticas do Windows.
-* **Evidência:** ![DLL Hijacking](Cenario3_evasao_DLL.png)
+* **Evidência:** ![DLL Hijacking](Cenario3_Evasao_DLL.png)
 ### 4. Execução de Script Suspeito (Evasão via PowerShell)
 * **Tática:** Execution / Defense Evasion
 * **Técnica:** T1059.001 (Command and Scripting Interpreter: PowerShell)
